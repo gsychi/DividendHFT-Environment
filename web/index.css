@@ -1,0 +1,288 @@
+/* GENERAL PAGE RULES */
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
+@import url('https://fonts.cdnfonts.com/css/effra-heavy');
+@import url('https://fonts.cdnfonts.com/css/effra');
+
+body {
+    font-family: "Karla" !important;
+    font-size: 1.1em !important;
+    line-height: 1.7em !important;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom, #1c1c1c, #333333) !important;
+    background-attachment: fixed !important;
+    color: #d9d9d9 !important;
+}
+
+h1 {
+    font-family: "Effra" !important;
+    font-size: 3.5em !important;
+}
+
+h2 {
+    font-family: "Effra" !important;
+    font-size: 2.5em !important;
+}
+
+h3 {
+    font-family: "Effra" !important;
+    font-size: 1.75em !important;
+}
+
+h4 {
+    font-family: "Effra" !important;
+    font-size: 1.25em !important;
+    line-height: 1em !important;
+}
+
+#holder {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+#left {
+    padding-left: 12%;
+    max-width:10%;
+}
+
+#middle {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width:100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+
+#right {
+    padding-left: 5%;
+}
+
+a {
+    color:#0d29fd;
+}
+
+a:hover {
+    color:#fd0d8d;
+}
+
+#one{
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 20px;
+    height: 15px;
+    font-size:1.5em;
+    color: #fd0d8d;
+}
+ 
+.button-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+ 
+.button {
+    font-size: 2em !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+    background-color: #fd0d8d !important;
+    color: white !important;
+    font-weight: bold !important;
+    margin: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.spaced-out:hover {
+    background-color: #a883ff !important;
+    color:#c9e0f8 !important;
+}
+
+.spaced-out {
+    font-family: "Effra" !important;
+    font-size: 1.25em !important;
+    font-weight: bold !important;
+    margin: 10px !important;
+    padding: 20px !important;
+    width: 15% !important;
+    margin: 10px !important;
+    cursor: pointer !important;
+    
+    color: #1c1c1c !important;
+}
+
+.btn-warning {
+    background-color: #c9e0f8 !important;
+}
+.btn-success {
+    background-color: #c9e0f8 !important;
+}
+
+.btn-primary {
+    background-color: #c9e0f8 !important;
+}
+
+.login {
+    width: 20% !important;
+}
+
+.back {
+    font-family: "Effra Heavy" !important;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    margin: 12px !important;
+    padding: 10px !important;
+    width: 100px !important;
+    margin: 10px !important;
+    cursor: pointer !important;
+    position: fixed;
+    bottom: 25px;
+    color: #1c1c1c !important;
+}
+
+.back:hover {
+    background-color: #a883ff !important;
+    color:#c9e0f8 !important;
+}
+
+.footer {
+    position: fixed;
+    bottom:10px !important;
+}
+ 
+pre {
+    background-color: #f2f2f2 !important;
+    border: 8px solid black !important;
+    padding: 10px !important;
+    font-size: 0.8em !important;
+    line-height: 1.2em;
+}
+
+code {
+    font-family: "Inconsolata" !important;
+}
+
+
+.circles{
+    margin-top:4% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 10%;
+    height: 10%;
+    background: rgba(255, 255, 255, 0.4);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(240deg);
+        opacity: 0;
+        border-radius: 90%;
+    }
+
+}
