@@ -29,23 +29,23 @@ Hopefully this gives a bit of insight into how the world works! Now, let's look 
 
   
 
-            `class Order:
+    ` class Order:
     
-    def __init__(self, marketmaker_name, order_time, qty, order_type, direction, valid_until, order_price=0, **kwargs): 
-        
-        # default values on the order
-        self.marketmaker_name = marketmaker_name
-        self.order_time = order_time
-        
-        self.qty = qty
-        self.order_type = order_type  # this can be a market order, or a limit order, which we specify as 'M' or 'L'
-        self.direction = direction # this is either 'B' for buy, or 'S' for sell
-        self.valid_until = valid_until # this is the time step it is valid until
-        
-        # for a market order, this is invalid. For a limit order, we will require a price.
-        # market orders are used just in case on a given day you think that you will take any
-        # bid or ask just to get out or get into a position asap
-        self.order_price = order_price ` 
+        def __init__(self, marketmaker_name, order_time, qty, order_type, direction, valid_until, order_price=0, **kwargs): 
+            
+            # default values on the order
+            self.marketmaker_name = marketmaker_name
+            self.order_time = order_time
+            
+            self.qty = qty
+            self.order_type = order_type  # this can be a market order, or a limit order, which we specify as 'M' or 'L'
+            self.direction = direction # this is either 'B' for buy, or 'S' for sell
+            self.valid_until = valid_until # this is the time step it is valid until
+            
+            # for a market order, this is invalid. For a limit order, we will require a price.
+            # market orders are used just in case on a given day you think that you will take any
+            # bid or ask just to get out or get into a position asap
+            self.order_price = order_price ` 
             
             
 
@@ -83,15 +83,15 @@ That should be enough about the general agents! Now, let's learn a bit more abou
 
 As a contestant trader, this is how you are initialized in the trading environment:
 
-        `class ContestantTrader(Trader):
-            def __init__(self, name, prediction_offness, capital=10000):
-                super().__init__(name, capital)
-                self.trades = []
-                self.total_asset_value = capital
-                
-                # guess on dividends
-                self.prediction_offness = prediction_offness
-                self.dividend_estimate = None`
+    `class ContestantTrader(Trader):
+        def __init__(self, name, prediction_offness, capital=10000):
+            super().__init__(name, capital)
+            self.trades = []
+            self.total_asset_value = capital
+            
+            # guess on dividends
+            self.prediction_offness = prediction_offness
+            self.dividend_estimate = None`
         
         
 
@@ -116,23 +116,23 @@ This defines how much starting capital you are given to trade with. Since the ma
   
 
 Now that this is defined, let's talk about your task in the challenge. Indeed, your goal is to edit the following function:  
-
-        ``def create_quotes(self, time, current_price=0, orderbook=None, transactions=None):
-            # The `create_quotes` function is used to generate quotes for a trader. 
     
-            # The parameters that you know as a trader are:
-            # - time: the current time in the trading environment
-            # - current_price: the current price of the stock
-            # - orderbook: the current state of the order book, including all outstanding orders and their details
-            # - self.dividend_estimate: your initial predicted dividend prediction on the day that the last dividend was paid out at. 
-            # You will also know any variable defined in the __init__ function.
-            
-            # The function should return a list of quotes in the following format:
-            # [{'order_time': int, 'qty': int, 'order_type': 'L' or 'M', 
-            # 'direction': 'B' or 'S', 'valid_until': int, 'order_price': float}]
-            # The market maker name will be added via the world environment 
-            # If you decide not to make any bids, please return an empty list, i.e. []
-            return []``
+    ``def create_quotes(self, time, current_price=0, orderbook=None, transactions=None):
+        # The `create_quotes` function is used to generate quotes for a trader. 
+    
+        # The parameters that you know as a trader are:
+        # - time: the current time in the trading environment
+        # - current_price: the current price of the stock
+        # - orderbook: the current state of the order book, including all outstanding orders and their details
+        # - self.dividend_estimate: your initial predicted dividend prediction on the day that the last dividend was paid out at. 
+        # You will also know any variable defined in the __init__ function.
+        
+        # The function should return a list of quotes in the following format:
+        # [{'order_time': int, 'qty': int, 'order_type': 'L' or 'M', 
+        # 'direction': 'B' or 'S', 'valid_until': int, 'order_price': float}]
+        # The market maker name will be added via the world environment 
+        # If you decide not to make any bids, please return an empty list, i.e. []
+        return []``
         
     
 
