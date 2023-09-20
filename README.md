@@ -29,7 +29,7 @@ Hopefully this gives a bit of insight into how the world works! Now, let's look 
 
   
 
-    ` class Order:
+     class Order:
     
         def __init__(self, marketmaker_name, order_time, qty, order_type, direction, valid_until, order_price=0, **kwargs): 
             
@@ -45,7 +45,7 @@ Hopefully this gives a bit of insight into how the world works! Now, let's look 
             # for a market order, this is invalid. For a limit order, we will require a price.
             # market orders are used just in case on a given day you think that you will take any
             # bid or ask just to get out or get into a position asap
-            self.order_price = order_price ` 
+            self.order_price = order_price 
             
             
 
@@ -83,7 +83,7 @@ That should be enough about the general agents! Now, let's learn a bit more abou
 
 As a contestant trader, this is how you are initialized in the trading environment:
 
-    `class ContestantTrader(Trader):
+    class ContestantTrader(Trader):
         def __init__(self, name, prediction_offness, capital=10000):
             super().__init__(name, capital)
             self.trades = []
@@ -91,7 +91,7 @@ As a contestant trader, this is how you are initialized in the trading environme
             
             # guess on dividends
             self.prediction_offness = prediction_offness
-            self.dividend_estimate = None`
+            self.dividend_estimate = None
         
         
 
@@ -117,7 +117,7 @@ This defines how much starting capital you are given to trade with. Since the ma
 
 Now that this is defined, let's talk about your task in the challenge. Indeed, your goal is to edit the following function:  
     
-    ``def create_quotes(self, time, current_price=0, orderbook=None, transactions=None):
+    def create_quotes(self, time, current_price=0, orderbook=None, transactions=None):
         # The `create_quotes` function is used to generate quotes for a trader. 
     
         # The parameters that you know as a trader are:
@@ -132,7 +132,7 @@ Now that this is defined, let's talk about your task in the challenge. Indeed, y
         # 'direction': 'B' or 'S', 'valid_until': int, 'order_price': float}]
         # The market maker name will be added via the world environment 
         # If you decide not to make any bids, please return an empty list, i.e. []
-        return []``
+        return []
         
     
 
